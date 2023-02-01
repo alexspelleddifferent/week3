@@ -1,0 +1,12 @@
+#real-alert {
+    background-color:orange;
+    border: 2px solid red;
+    font-weight: bold;
+    font-size: 20px;
+    color:black;
+}
+
+#test-only {
+    background-color:cyan;
+    border: 2px solid blue;
+}

@@ -1,0 +1,14 @@
+.text {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.jumbotron {
+    background-color: lavender;
+    font-family: "Russo One";
+}
+
+body {
+    font-family: "DM Serif Display";
+    background-color: rgb(104, 155, 138);
+}
