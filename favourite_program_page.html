@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favourite Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Card Finder</h1>
+    </div>
+    <div>
+        <p>This is a program that I created to scan tournament results for the card game Magic: Gathering and to inform me when it finds a decklist containing my favourite card.</p>
+        Here is a snippet of code from it, showcasing a function:
+        
+        <pre>
+            <code>
+def deck_constructor(deck, event_name):
+# takes a raw decklist dictionary and the name of the event and builds a decklist and returns it
+current_player=deck["player"]
+current_decklist={'Player':current_player, 'Event':event_name}
+for j in range(len(deck['deck'])):
+    if deck['deck'][j]['SB']==True:
+        card_category='Sideboard'
+    else:
+        card_category='Main Deck'
+    current_decklist[card_category]={}
+    for k in range(len(deck['deck'][j]['DECK_CARDS'])):
+        card_quantity=deck['deck'][j]['DECK_CARDS'][k]['Quantity']
+        try:
+            card_type=deck['deck'][j]['DECK_CARDS'][k]['CARD_ATTRIBUTES']['Type']
+        except:
+            card_type='Split'
+        card_name=deck['deck'][j]['DECK_CARDS'][k]['CARD_ATTRIBUTES']['NAME']
+        current_decklist[card_category][card_name]=[card_type, card_quantity]
+return current_decklist
+            </code>
+        </pre>
+
+    </div>
+    <div>
+        You can find a link to it at <a href="https://github.com/alexspelleddifferent/coatl_enjoyer">github</a>
+    </div>
+</body>
+</html> 
