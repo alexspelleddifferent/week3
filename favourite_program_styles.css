@@ -1,0 +1,9 @@
+.jumbotron {
+    background-color: aquamarine;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#sample_code {
+    text-shadow: 2px 2px aquamarine; 
+}
